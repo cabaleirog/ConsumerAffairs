@@ -1,0 +1,212 @@
+@import '../core/styles/variables';
+
+%resolution-container {
+  padding: 17px 30px;
+  // background: white;
+  // border: 2px dashed rgba(0,0,0,0.2);
+  border-radius: 5px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  padding: 15px 15px 9px;
+  background: rgba($primary, 0.1);
+  box-shadow: 3px 3px 15px rgba($tertiary, 0.5);
+
+  p {
+    font-style: italic;
+  }
+}
+
+.company-info {
+  background: $primary;
+  display: flex;
+  align-items: center;
+  flex-flow: column nowrap;
+  // min-height: 250px;
+  justify-content: center;
+  padding-bottom: 25px;
+  margin-bottom: 50px;
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.75);
+
+  h1 {
+    font-size: 40px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    // color: $secondary;
+    color: white;
+    margin: 0;
+    padding-top: 25px;
+    padding-bottom: 15px;
+  }
+
+  p {
+    max-width: 600px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+  }
+
+}
+
+.container {
+  // width: $container-width;
+  margin: 0 auto;
+  // max-width: 1280px;
+  width: 760px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.review-card {
+  width: 100%;
+  margin: 0;
+  // border: 2px dashed red;
+  // display: flex;
+  // flex-flow: column nowrap;
+  margin-bottom: 125px;
+
+  &__buyers-resolution {
+    @extend %resolution-container;
+    background: rgba($secondary, 0.1);
+    box-shadow: 3px 3px 15px rgba($tertiary, 0.5);
+    // margin-bottom: 25px;
+  }
+
+  &__title {
+    margin-bottom: 25px;
+
+    span {
+      // font-family: 'Raleway', sans-serif;
+      font-size: 30px;
+      letter-spacing: 0.03em;
+      font-weight:normal;
+      color: #414141;
+    }
+  }
+
+  &__content {
+    display: flex;
+    // font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    color: #6E6E6E;
+    line-height: 1.6;
+
+    &--left {
+      width: 130px;
+    }
+
+    &--right {
+      width: 600px;
+    }
+
+  }
+
+  &__company-response {
+    @extend %resolution-container;
+    background: rgba($tertiary, 0.1);
+
+    h2 {
+      font-size: 20px;
+      color: $tertiary;
+      font-weight: 600;
+    }
+  }
+
+  &__image {
+    width: 100px;
+
+    img {
+      border-radius: 100%;
+      width: 75px;
+      height: 75px;
+    }
+
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+
+  &__verified {
+    display: flex;
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+
+    i {
+      color: $primary;
+      margin-right: 5px;
+      font-size: 25px;
+    }
+
+  }
+
+  // &__original-review {
+  // }
+
+}
+
+.review-card-body {
+  text-align: justify;
+  line-height: 24px;
+}
+
+// .reviewer-image {
+//   background-image: url('https://kahoot.com/files/2017/05/carla_trans-64x64.png');
+//   background-size: cover;
+//   margin-right: 15px;
+// }
+
+
+
+/* Buyers resolution styles */
+
+
+ /* End of buyers resolution styles */
+
+
+
+
+.review-header {
+  margin-left: 20px;
+  margin-top: 10px;
+  & span {
+    margin-top: 5px;
+  }
+}
+
+.verified-reviewer {
+  display: inline;
+  margin-right: 5px;
+  color: green;
+  vertical-align: bottom;
+}
+
+.review-date {
+  display: block;
+  margin-bottom: 16px;
+  color: rgba(0,0,0,.54);
+  font-size: 14px;
+}
+
+.reviewer {
+  font-size: 18px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+span .positive {
+  color: green;
+}
+
+span .negative {
+  color: red;
+}
+
+.line-separator {
+  width: 600px;
+  border-top: 1px solid lightgrey;
+  margin: 20px 0px;
+}

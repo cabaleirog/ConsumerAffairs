@@ -1,0 +1,32 @@
+@import '../core/styles/variables';
+
+.container {
+  position: relative;
+  height: 25px;
+  width: 100px;
+}
+
+.stars-display {
+  display: flex;
+}
+
+.star {
+  padding-right: 8px;
+}
+
+.start-icon {
+  height:25px;width:25px;
+  display: block;
+  position: relative;
+  stroke: $secondary;
+  stroke-width: 13px;
+  fill: none;
+
+}
+
+// .start-icon .start-icon--empty {
+// }
+
+.start-icon--full {
+  fill: $secondary;
+}

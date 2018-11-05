@@ -1,0 +1,42 @@
+<div class="stars-display">
+  <div *ngFor="let rating of starRating; let i=index" class="star" [class.unrated]="rating === 0">
+
+    <!-- <span class="start-icon" [class.start-icon--full]="rating == 1"> -->
+      <!-- <svg style="width: 25px; height: 25px;" viewBox="0 0 200 200" height="200"
+        width="200" xmlns="http://www.w3.org/2000/svg" data-type="shape">
+        <path d="M104.368 19.886l23.062 46.728a4.872 4.872 0 0 0 3.668 2.665l51.567.257c3.996.581 5.591 5.491 2.7 8.309l-37.314 43.608a4.872 4.872 0 0 0-1.401 4.312l17.152 51.359c.683 3.979-3.494 7.014-7.068 5.135l-54.467-24.248a4.873 4.873 0 0 0-4.534 0L45.022 182.26c-3.574 1.879-7.751-1.156-7.068-5.135l15.397-51.359a4.872 4.872 0 0 0-1.401-4.312L14.635 79.203c-2.891-2.818-1.296-7.729 2.7-8.309l51.567-1.615a4.872 4.872 0 0 0 3.668-2.665l23.062-46.728c1.787-3.621 6.949-3.621 8.736 0z"></path>
+      </svg>
+    -->
+    <span>
+      <svg style="width: 25px; height: 25px;" viewBox="0 0 200 200" data-type="shape">
+
+      <linearGradient [id]="rating.id" x1="0" x2="100%" y1="0" y2="0">
+        <stop [attr.offset]="rating.percentage" [attr.stop-color]="fillColor"/>
+        <stop offset="0" stop-color="white"/>
+        <!-- <stop [attr.offset]="1 - rating.percentage" stop-color="white"/> -->
+      </linearGradient>
+      <path [attr.fill]="'url(#' + rating.id + ')'" [attr.stroke]="strokeColor" stroke-width="15" d="M104.368 19.886l23.062 46.728a4.872 4.872 0 0 0 3.668 2.665l51.567.257c3.996.581 5.591 5.491 2.7 8.309l-37.314 43.608a4.872 4.872 0 0 0-1.401 4.312l17.152 51.359c.683 3.979-3.494 7.014-7.068 5.135l-54.467-24.248a4.873 4.873 0 0 0-4.534 0L45.022 182.26c-3.574 1.879-7.751-1.156-7.068-5.135l15.397-51.359a4.872 4.872 0 0 0-1.401-4.312L14.635 79.203c-2.891-2.818-1.296-7.729 2.7-8.309l51.567-1.615a4.872 4.872 0 0 0 3.668-2.665l23.062-46.728c1.787-3.621 6.949-3.621 8.736 0z"></path>
+      </svg>
+
+    </span>
+
+  </div>
+</div>
+
+<!-- <div class="stars-display">
+    <div *ngFor="let rating of starRating" class="star">
+
+      <span class="Rating2769505843--icon" style="height:25px;width:25px;display: block;position: relative;stroke: rgba(255, 204, 0, 1);stroke-width: 13px;fill: transparent;">
+          <svg style="width: 25px; height: 25px;"
+            viewBox="0 0 200 200" height="200" width="200" xmlns="http://www.w3.org/2000/svg" data-type="shape">
+          <g>
+              <path d="M104.368 19.886l23.062 46.728a4.872 4.872 0 0 0 3.668 2.665l51.567.257c3.996.581 5.591 5.491 2.7 8.309l-37.314 43.608a4.872 4.872 0 0 0-1.401 4.312l17.152 51.359c.683 3.979-3.494 7.014-7.068 5.135l-54.467-24.248a4.873 4.873 0 0 0-4.534 0L45.022 182.26c-3.574 1.879-7.751-1.156-7.068-5.135l15.397-51.359a4.872 4.872 0 0 0-1.401-4.312L14.635 79.203c-2.891-2.818-1.296-7.729 2.7-8.309l51.567-1.615a4.872 4.872 0 0 0 3.668-2.665l23.062-46.728c1.787-3.621 6.949-3.621 8.736 0z"></path>
+          </g>
+      </svg>
+      </span>
+
+
+
+
+    </div>
+  </div> -->

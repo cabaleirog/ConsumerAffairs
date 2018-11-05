@@ -1,0 +1,29 @@
+// Typography
+// ------------------------------
+$font-family: Roboto, 'Helvetica Neue', sans-serif !default;
+$font-size:   10px !default;
+
+$primary: #336699 !default;
+$secondary: #FFCC66 !default;
+$tertiary: #003366 !default;
+
+// $primary-color: red;
+// $primary-color: blue;
+$primary-color: pink;
+$primary-color: pink;
+
+$profile-image-size: 60px;
+
+
+$bg-color: #f5f5f5;
+$bg-dark: #0C2A38;
+
+
+$base-color: #484848;
+$base-color-light: lighten($base-color, 30%);
+
+$accent: #3796cf;
+$accent-dark: darken($accent, 20%);
+$accent-hover: darken($accent, 5%);
+
+$container-width: 70%;

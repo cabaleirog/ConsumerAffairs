@@ -1,0 +1,12 @@
+<div class="helpful-row">
+  <span *ngIf="!clicked" [ngClass]="{'clicked': clicked}" (click)="onClick()" class="find-helpfull">
+    <i class="far fa-thumbs-up" style="font-size: 22px; margin-right: 5px;"></i>
+    <strong>HELPFUL</strong>
+  </span>
+  <span>
+    <span *ngIf="!clicked" class="divider"> | </span>
+    <span *ngIf="currentLikes == 0">Be the first one to find this review helpful</span>
+    <span *ngIf="currentLikes == 1"><b>{{ currentLikes }} person </b> found this review helpful</span>
+    <span *ngIf="currentLikes > 1"><b>{{ currentLikes }} people </b> found this review helpful</span>
+  </span>
+</div>

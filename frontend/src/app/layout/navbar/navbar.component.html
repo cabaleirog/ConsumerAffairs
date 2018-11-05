@@ -1,0 +1,19 @@
+<nav class="navigation">
+  <ul class="navigation__menu">
+    <li routerLinkActive="current" [routerLinkActiveOptions]="{exact: true}"><a [routerLink]="['/']" data-hover="Home">Home</a></li>
+    <li routerLinkActive="current"><a [routerLink]="['/categories']" data-hover="Categories">Categories</a></li>
+    <!-- <li routerLinkActive="current"><a [routerLink]="['/companies']" data-hover="Companies">Companies</a></li>
+    <li routerLinkActive="current"><a [routerLink]="['/reviews']" data-hover="Reviews">Reviews</a></li> -->
+  </ul>
+
+  <div class="navigation__external">
+      <a href="https://github.com/cabaleirog" title="GitHub">
+        <img src="../../../assets/img/github-icon.svg">
+      </a>
+      <a href="http://127.0.0.1:5000" title="API">
+        <img src="../../../assets/img/api.svg" style="filter: invert(100%);">
+      </a>
+  </div>
+</nav>
+
+<div style="background: #003366; height: 65px;"></div>

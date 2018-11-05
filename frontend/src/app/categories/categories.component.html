@@ -1,0 +1,33 @@
+<app-spinner [loading]="!categories">
+  <!-- <div *ngFor="let category of categories">
+    <h1>{{category.name}}</h1>
+    <h3>{{category.url}}</h3>
+    <p>{{category.description}}</p>
+    <ul>
+      <ul *ngFor="let subcategory of category.subcategories">
+        <a [routerLink]="['/', 'companies', {url: subcategory.url}]"
+          [replaceUrl]="false">Go</a>
+        <strong> {{subcategory.name}}</strong>
+        <span> - <a [href]="subcategory.url">{{subcategory.url}}</a></span>
+      </ul>
+    </ul>
+    <hr>
+  </div> -->
+
+
+  <div class="categories">
+    <div class="div-block-4" *ngFor="let category of categories">
+      <div class="div-block-5">
+        <div class="text-block">{{category.name}}</div>
+        <p class="paragraph-4">{{category.description}}</p>
+        <div id="w-node-271bd2a0108f-6780494b" class="div-block-3">
+          <div *ngFor="let subcategory of category.subcategories" class="subcategory">
+            <a [routerLink]="['/companies', {url: subcategory.url}]" [replaceUrl]="false">{{subcategory.name}}</a>
+            <!-- <a [href]="subcategory.url"> {{subcategory.name}} </a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</app-spinner>

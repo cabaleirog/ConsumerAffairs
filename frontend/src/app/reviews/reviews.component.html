@@ -1,0 +1,106 @@
+<app-spinner [loading]="!reviews">
+
+  <div class="company-info">
+    <h1>{{company ? company.name : '...'}}</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, consequatur architecto illum aspernatur itaque assumenda similique mollitia cupiditate a fugit illo animi facere esse maxime ipsum aut quae dolores natus.
+    </p>
+  </div>
+
+  <div class="container">
+
+    <!-- <button [disabled]="currentPage <= 1" (click)="goToPreviousPage()">Previous</button>
+    <span>Page {{ currentPage }}</span>
+    <button [disabled]="!isPageAvailable(currentPage + 1)" (click)="goToNextPage()">Next</button> -->
+<!--
+    <app-spinner spinnerImage="../../../assets/img/lg-ajax-spinner.gif"
+      *ngIf="!reviews">
+      <h1>Loading...</h1>
+    </app-spinner> -->
+
+    <!-- <app-spinner spinnerImage="../../../assets/img/lg-ajax-spinner.gif" *ngIf="!(reviews$ | async)?.length > 0">
+      <h1>Loading...</h1>
+    </app-spinner> -->
+
+
+
+    <!-- <p> {{ (reviews | async)?.length > 0 }}</p> -->
+    <div *ngFor="let review of reviews" class="review-card">
+      <div class="review-card__title">
+        <!-- Verified -->
+        <span class="reviewer">{{ review.reviewer.name }} of {{
+          review.reviewer.from }}</span>
+      </div>
+
+      <div class="review-card__content">
+        <div class="review-card__content--left">
+          <!-- Left column -->
+          <app-user-image *ngIf="review.reviewer.image_url" [imageUrl]="review.reviewer.image_url"></app-user-image>
+          <!-- <img *ngIf="!review.reviewer.image_url" src="../../assets/img/user-male.svg" -->
+          <img *ngIf="!review.reviewer.image_url" src="../../assets/img/man.png"
+            style="border-radius: 100%;height: 75px;">
+        </div>
+
+        <div class="review-card__content--right">
+          <!-- Right column -->
+          <div class="review-card__info">
+            <div>
+              <!-- Stars -->
+              <app-rating [rating]="review.stars"></app-rating>
+            </div>
+
+            <div class="review-card__verified">
+              <div *ngIf="review.reviewer.is_verified_reviewer" style="margin-left: 30px;">
+                <i class="fa fa-award" aria-hidden="true"></i>
+                <span> Verified Reviewer</span>
+              </div>
+
+              <div *ngIf="review.reviewer.is_verified_buyer" style="margin-left: 30px;">
+                <i class="fa fa-donate" aria-hidden="true"></i>
+                <span> Verified Buyer</span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="review-card__text">
+            <div *ngIf="review.customer_response_text" class="review-card__buyers-resolution">
+              <strong>{{ review.customer_response_date | date:'MMM d, y' }}</strong>
+              <p *ngFor="let customer_response_text of review.customer_response_text.split('\n')">
+                {{ customer_response_text }}
+              </p>
+            </div>
+
+            <!-- <div *ngFor="let review_comment of review.review.split('\n')">
+              <app-review-text [inputText]="review_comment"></app-review-text>
+            </div> -->
+            <div class="review-card__original-review">
+              <span class="review-date">
+                Original review: {{review.original_review_date | date:'MMM d, y'}}
+              </span>
+              <p *ngFor="let paragraph of review.review.split('\n')">
+                {{paragraph}}
+              </p>
+            </div>
+
+            <div *ngIf="review.company_response_text" class="review-card__company-response">
+              <time>{{ review.company_response_date | date:'MMM d, y' }}</time>
+              <h2>{{company.name}} response</h2>
+              <p *ngFor="let company_response_text of review.company_response_text.split('\n')">
+                {{ company_response_text }}
+              </p>
+            </div>
+
+          </div>
+
+          <div class="line-separator"></div>
+
+          <app-helpful [currentLikes]="review.helpful"></app-helpful>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</app-spinner>

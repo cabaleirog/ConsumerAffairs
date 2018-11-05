@@ -1,0 +1,17 @@
+<app-spinner [loading]="!companies">
+
+  <div style="display: flex; flex-flow: column nowrap; align-items: center;">
+    <div *ngFor="let company of companies" style="width: 950px;">
+      <h1>{{company.name}} <a [routerLink]="['/', 'reviews', {url: company.url}]" [skipLocationChange]="true">GO</a></h1>
+      <p>{{company.description}}</p>
+      <p>{{company.reviews}} reviews</p>
+      <div style="display: flex; align-items: baseline;">
+        <span style="margin-right: 25px;">Rating {{company.rating}}</span>
+        <app-rating [rating]="company.rating" [style.opacity]="rating == 0 ? 0 : 1"></app-rating>
+      </div>
+      <img [src]="company.image" style="height: 50px;">
+      <hr>
+    </div>
+  </div>
+
+</app-spinner>

@@ -1,0 +1,11 @@
+@import '../core/styles/variables';
+@import '../core/styles/mixins';
+
+.profile-image {
+  @include round-image($profile-image-size);
+}
+
+.profile-image-missing {
+  @include round-image($profile-image-size);
+  background-image: url('http://doctorsassociationkashmir.com/wp-content/uploads/2017/02/dummy-profile-pic-male1.jpg');
+}

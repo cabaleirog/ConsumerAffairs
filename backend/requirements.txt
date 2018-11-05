@@ -1,0 +1,9 @@
+Flask==1.0.2
+Flask-Cors==3.0.6
+flask-restplus
+pymongo==3.7.1
+requests==2.19.1
+Scrapy
+firebase-admin
+python-dateutil
+selenium

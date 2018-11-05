@@ -1,0 +1,8 @@
+<div [ngSwitch]="loading">
+  <div class="spinner" *ngSwitchCase="true">
+    <img src="../../assets/img/loading-multicolor.gif">
+  </div>
+  <div *ngSwitchCase="false">
+    <ng-content></ng-content>
+  </div>
+</div>

@@ -1,0 +1,42 @@
+.helpful-row {
+    padding-top: 10px;
+
+    .example-icon {
+      transition: all 0.5s;
+    }
+
+    &:hover {
+        .example-icon {
+            transition: all 1s;
+            transform: rotateX(720deg);
+            color: blue;
+        }
+    }
+
+    .clicked {
+      transform-style: none;
+      transition: all 4s;
+    }
+}
+
+
+span.find-helpful {
+    user-select: none;
+    cursor: pointer;
+}
+
+span {
+    font-size: 14px;
+    text-align: left;
+}
+
+.example-icon {
+    margin-right: -5px;
+    font-size: 14px;
+}
+
+.divider {
+    margin-right: 8px;
+    margin-left: 8px;
+    background-color: transparent;
+}
